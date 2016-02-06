@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+.text-muted {
+    color: #aaa;
+}
+
+.bar.bar-stable {
+    background: url('../img/head-bg.png') top center repeat-x;
+    border-width: 0 1px 4px 1px;
+    border-color: #e7e7e7;
+}
+
+.bar.bar-stable .title {
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-size: 2em;
+    color: #2a5b74;
+}
+
+.item-thumbnail-left > img:first-child {
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}

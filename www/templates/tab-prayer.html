@@ -1,0 +1,65 @@
+<ion-view view-title="Prayer Times">
+  <ion-content class="padding center">
+
+      <div ng-hide="prayers" class="row">
+          <div class="col" style="text-align: center; margin-top: 3em;">
+            <i class="icon ion-load-a"></i> Loading...
+          </div>
+      </div> 
+
+      <div ng-show="prayers">
+      
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33 col-offset-33"><h3>Athan</h3></div>
+                <div class="col col-33"><h3>Iqama</h3></div>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Fajr</h3></div>
+                <div class="col col-33">{{ prayers.field_fajr_athan[0].value }}</div>
+                <div class="col col-33">{{ toHHMM(prayers.field_fajr[0].value) }}</div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Dhuhr</h3></div>
+                <div class="col col-33">{{ prayers.field_dhuhr_athan[0].value }}</div>
+                <div class="col col-33">{{ toHHMM(prayers.field_dhuhr[0].value) }}</div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Juma'a</h3></div>
+                <div class="col col-33">{{ toHHMM(prayers.field_jumaa[0].value) }}</div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Asr</h3></div>
+                <div class="col col-33">{{ prayers.field_asr_athan[0].value }}</div>
+                <div class="col col-33">{{ toHHMM(prayers.field_asr[0].value) }}</div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Maghrib</h3></div>
+                <div class="col col-33">{{ prayers.field_maghrib_athan[0].value }}</div>
+                <div class="col col-33">{{ prayers.field_maghrib[0].value }}</div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="row item">
+                <div class="col col-33"><h3>Isha</h3></div>
+                <div class="col col-33">{{ prayers.field_isha_athan[0].value }}</div>
+                <div class="col col-33">{{ toHHMM(prayers.field_isha[0].value) }}</div>
+            </div>
+        </div>
+
+      </div>
+
+
+  </ion-content>
+</ion-view>
