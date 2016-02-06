@@ -1,5 +1,5 @@
 <ion-view view-title="Videos">
-  <ion-content>
+  <ion-content on-swipe-right="goToUpdates()">
     <div class="bar bar-header item-input-inset">
         <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
@@ -18,7 +18,7 @@
 
     <div ng-repeat="video in videos | filter:filterText" class="list">
 
-        <a class="item item-thumbnail-left" ng-href="{{video.link}}">
+        <a class="item item-thumbnail-left" href="#" ng-click="openLink('{{video.link}}')">
             <img src="{{video.mediaGroups[0].contents[0].thumbnails[0].url}}">
             <h2>{{video.title}}</h2>
             <p>{{video.content}}</p>

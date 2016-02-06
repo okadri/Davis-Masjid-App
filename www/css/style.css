@@ -1,4 +1,8 @@
 /* Empty. Add your own CSS if you like */
+a {
+    text-decoration: none;
+}
+
 .text-muted {
     color: #aaa;
 }

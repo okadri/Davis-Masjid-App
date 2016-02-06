@@ -1,5 +1,5 @@
 <ion-view view-title="Updates">
-  <ion-content>
+  <ion-content on-swipe-right="goToPrayer()" on-swipe-left="goToVideos()">
     <div class="bar bar-header item-input-inset">
         <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
@@ -25,7 +25,9 @@
             {{newsletter.content}}
         </div>
         <div class="item item-divider">
-            <span class="item-note"><a href="{{newsletter.link}}">more</a></span>
+            <span class="item-note">
+                <a href="#" ng-click="openLink('{{newsletter.link}}')">more&hellip;</a>
+            </span>
         </div>
     </div>
   </ion-content>
