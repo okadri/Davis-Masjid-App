@@ -10,13 +10,19 @@
         </button>
     </div>
 
+    <div ng-hide="videos" class="row">
+        <div class="col" style="text-align: center; margin-top: 3em;">
+        <i class="icon ion-load-a"></i> Loading...
+        </div>
+    </div> 
+
     <div ng-repeat="video in videos | filter:filterText" class="list">
 
         <a class="item item-thumbnail-left" ng-href="{{video.link}}">
             <img src="{{video.mediaGroups[0].contents[0].thumbnails[0].url}}">
             <h2>{{video.title}}</h2>
             <p>{{video.content}}</p>
-            <small class="text-muted">{{video.publishedDate}}</small>
+            <small class="text-muted">{{video.publishedDate.slice(0, -15)}}</small>
         </a>
 
     </div>
